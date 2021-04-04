@@ -10,10 +10,10 @@ header {
     display: block;
     text-align: right;
 }
-header img {
+.matrix {
     width: 100%;
 }
-header .more-inf {
+.more-inf {
     font-family: fantasy, cursive;
 }
 
@@ -41,7 +41,7 @@ ul {
 li, h3 {
     list-style:none;
 }
-input,button{
+input, button{
     outline:none;
 }
 button {
@@ -124,12 +124,12 @@ li >    input[type="text"] {
 li > button.delete:hover {
     color: #CF2323;
 }
-button.delete img {
+.delete img {
     height: 2em;
     transform: rotateZ(45deg);
     transition: transform 200ms ease-in;
 }
-button.delete img:hover {
+.delete img:hover {
     transform: rotateZ(0);
 }
 
