@@ -1,19 +1,62 @@
-<html>
-<HEAD><title>Todo App</title>
-<link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="style.css" type="text/css" MEDIA="screen" charset="utf-8">
-</HEAD>
+<!DOCTYPE html>
+<head>
+  <title>Todo App</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" media="screen" charset="utf-8">
+</head>
 <body>
-<div class="aaa"><img src="./eisenhower-matrix.jpg"><a class='more_inf' href="https://goal-life.com/page/method/matrix-eisenhower">Want more details&quest;</a></div>
-<div class="centered-main-page-element"><p id='topSectionForAddingElementToList'><label for="new-task">Add Item</label><div class="task-row-wrapper"><input id='new-task'class="task" type="text"><button>Add</button></div>
-</p><h3>Todo</h3>
-<ul id='incompleteTasks'>
-<li><input type='checkbox'><label class="task">Pay Bills</label><input type="text" class="task"><button class="edit">Edit</button><button class="delete"><img src="./remove.svg"></button></li>
-<li class="editMode"><input type="checkbox"><label class="task">Go Shopping</label><input type="text" value="Go Shopping" class="task"><button class='edit'>Save</button><button class="delete"><img src="./remove.svg"></button></li>
-</ul><h3>Completed</h3><ul id="completed-tasks"><li><input type="checkbox" checked><label class="task">See the Doctor</label><input type="text" class="task"><button class="edit">Edit</button><button class="delete"><img src="./remove.svg"></button>
-</li>
-</ul>
-</div>
-<script type="text/javascript" SRC="app.js"></script>
+  <header class="header">
+    <img class="header__img" src="./eisenhower-matrix.jpg" alt="The Eisenhower Matrix">
+    <a class="header__more-inf" href="https://goal-life.com/page/method/matrix-eisenhower">Want more details?</a>
+  </header>
+  <main class="main">
+    <section class="new-task">
+      <h3 class="section-name new-task__section-name">Add Item</h3>
+      <p>
+        <div class="new-task__input-wrapper">
+          <input id="new-task" class="task new-task__task" type="text">
+          <button class="button add-button new-task__add-button">Add</button>
+        </div>
+      </p>
+    </section>
+    <section class="incompl">
+      <h3 class="section-name incompl__section-name">Todo</h3>
+      <ul class="incompl-tasks" id="incompl-tasks">
+        <li class="list-item incompl-tasks__list-item">
+          <input class="check incompl-tasks__check" type="checkbox">
+          <label class="task-label incompl-tasks__task-label">Pay Bills</label>
+          <input type="text" class="task incompl-tasks__task">
+          <button class="button button-edit incompl-tasks__button-edit">Edit</button>
+          <button class="button button-delete incompl-tasks__button-delete">
+            <img class="del-img incompl-tasks__del-img" src="./remove.svg" alt="">
+          </button>
+        </li>
+        <li class="list-item incompl-tasks__list-item list-item_edit">
+          <input class="check incompl-tasks__check" type="checkbox">
+          <label class="task-label incompl-tasks__task-label">Go Shopping</label>
+          <input type="text" value="Go Shopping" class="task incompl-tasks__task">
+          <button class="button button-edit incompl-tasks__button-edit">Save</button>
+          <button class="button button-delete incompl-tasks__button-delete">
+            <img class="del-img incompl-tasks__del-img" src="./remove.svg" alt="">
+          </button>
+        </li>
+      </ul>
+    </section>
+    <section class="compl">
+      <h3 class="section-name compl__section-name">Completed</h3>
+      <ul class="compl-tasks" id="compl-tasks">
+        <li class="list-item compl-tasks__list-item">
+          <input class="check compl-tasks__check" type="checkbox" checked>
+          <label class="task-label compl-tasks__task-label">See the Doctor</label>
+          <input type="text" class="task compl-tasks__task">
+          <button class="button button-edit compl-tasks__button-edit">Edit</button>
+          <button class="button button-delete compl-tasks__button-delete">
+            <img class="del-img compl-tasks__del-img" src="./remove.svg" alt="">
+          </button>
+        </li>
+      </ul>
+    </section>
+  </main>
+  <script src="app.js"></script>
 </body>
 </html>
